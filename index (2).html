@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portafolio científico sobre el jaguar (Panthera onca), elaborado con información de fuentes científicas y organismos de conservación.">
+<title>Portafolio científico | Jaguar (Panthera onca)</title>
+<style>
+:root{
+ --forest:#12372d;--forest2:#1f5a46;--leaf:#4d8068;--gold:#d3a84c;
+ --cream:#f5f2e9;--paper:#fff;--ink:#17211e;--muted:#64716c;
+ --line:#dce4df;--danger:#8f3939;--shadow:0 14px 40px rgba(18,55,45,.10)
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+html{scroll-padding-top:78px}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:#f6f8f6;color:var(--ink);line-height:1.72}
+a{color:var(--forest2)}
+.hero{
+ min-height:92vh;color:#fff;display:flex;align-items:center;padding:90px 8%;
+ background:
+ linear-gradient(90deg,rgba(6,27,20,.92) 0%,rgba(6,27,20,.66) 45%,rgba(6,27,20,.18) 100%),
+ url("https://commons.wikimedia.org/wiki/Special:FilePath/Jaguar%20animal%20panthera%20onca.jpg") center/cover fixed;
+}
+.hero-inner{max-width:980px}
+.kicker{letter-spacing:4px;text-transform:uppercase;color:#f0d58a;font-weight:800;font-size:.85rem}
+h1{font-size:clamp(3.3rem,8vw,7.8rem);line-height:.88;margin:20px 0 10px}
+.sciname{font-size:clamp(1.4rem,3vw,2.4rem);font-style:italic;color:#f0d58a}
+.hero-text{max-width:720px;font-size:1.15rem}
+.btn{display:inline-block;margin-top:22px;padding:13px 20px;border-radius:999px;background:var(--gold);color:#16261f;text-decoration:none;font-weight:800}
+nav{position:sticky;top:0;z-index:50;background:rgba(18,55,45,.98);box-shadow:0 4px 20px #0002;display:flex;justify-content:center;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;padding:14px 13px;font-size:.83rem}
+nav a:hover{background:var(--forest2)}
+main{max-width:1250px;margin:auto;padding:10px 22px 90px}
+section{padding:78px 0;border-bottom:1px solid var(--line)}
+.section-no{color:var(--gold);font-weight:900;letter-spacing:3px;font-size:.8rem;text-transform:uppercase}
+h2{font-size:clamp(2.2rem,4vw,3.6rem);line-height:1.05;color:var(--forest);margin:8px 0 22px}
+h3{color:var(--forest2);margin-top:0}
+.lead{font-size:1.12rem;max-width:900px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.card{background:var(--paper);padding:25px;border-radius:20px;box-shadow:var(--shadow)}
+.card.soft{background:var(--cream);box-shadow:none}
+.fact{border-left:5px solid var(--gold);background:#fff;padding:18px 22px;border-radius:10px;margin:22px 0}
+.stat{font-size:2.25rem;font-weight:900;color:var(--forest)}
+.tag{display:inline-block;background:#e8f0eb;color:var(--forest2);font-weight:800;padding:5px 11px;border-radius:999px;margin:3px}
+img{display:block;width:100%;height:auto;border-radius:16px}
+.figure{margin:0}
+.figure img{aspect-ratio:16/10;object-fit:cover}
+.caption{font-size:.82rem;color:var(--muted);margin-top:8px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+th,td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--forest);color:#fff}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gallery figure{margin:0;position:relative;overflow:hidden;border-radius:15px;background:#ddd}
+.gallery img{height:280px;object-fit:cover;transition:transform .35s}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:28px 12px 10px;color:#fff;background:linear-gradient(transparent,#000b);font-size:.85rem}
+.timeline{border-left:4px solid var(--gold);padding-left:25px}
+.timeline article{margin:0 0 30px}
+.timeline strong{color:var(--forest2)}
+.bar{height:12px;background:#e4ebe7;border-radius:99px;overflow:hidden;margin:9px 0 20px}
+.bar span{display:block;height:100%;background:var(--leaf)}
+.quote{font-size:1.25rem;font-style:italic;background:var(--forest);color:white;padding:30px;border-radius:20px}
+.citation{background:#edf4ef;border-radius:10px;padding:10px 14px;font-size:.9rem}
+.reference{padding:18px 0;border-bottom:1px dashed #cbd5d0}
+.reference a{word-break:break-word}
+.note{font-size:.9rem;color:var(--muted)}
+.callout{background:linear-gradient(135deg,#12372d,#285f4c);color:white;border-radius:24px;padding:35px}
+.callout h3{color:#f0d58a}
+footer{background:#0c281f;color:#dce8e2;text-align:center;padding:60px 8%}
+footer a{color:#f0d58a}
+@media(max-width:800px){.grid-2{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.hero{background-attachment:scroll}}
+@media(max-width:520px){.gallery{grid-template-columns:1fr}nav a{padding:10px 7px;font-size:.75rem}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="inicio">
+ <div class="hero-inner">
+  <div class="kicker">Portafolio virtual de investigación científica</div>
+  <h1>Jaguar</h1>
+  <div class="sciname">Panthera onca (Linnaeus, 1758)</div>
+  <p class="hero-text">Una revisión de la morfología, comportamiento, hábitat, alimentación, función ecológica y conservación de uno de los principales depredadores de América.</p>
+  <p class="note" style="color:#e8eee9">El jaguar es uno de los grandes depredadores de América y una especie clave para comprender la dinámica de los ecosistemas neotropicales.</p>
+  <a class="btn" href="#resumen">Comenzar el recorrido ↓</a>
+ </div>
+</header>
+
+<nav>
+ <a href="#resumen">Resumen</a><a href="#taxonomia">Taxonomía</a><a href="#morfologia">Morfología</a>
+ <a href="#sentidos">Adaptaciones</a><a href="#comportamiento">Comportamiento</a><a href="#habitat">Hábitat</a>
+ <a href="#dieta">Dieta</a><a href="#ecologia">Ecología</a><a href="#colombia">Colombia</a>
+ <a href="#conservacion">Conservación</a><a href="#galeria">Galería</a><a href="#metodologia">Metodología</a>
+ <a href="#referencias">APA</a>
+</nav>
+
+<main>
+
+<section id="resumen">
+ <div class="section-no">01 · Presentación</div>
+ <h2>Resumen de la especie</h2>
+ <div class="grid-2">
+  <div>
+   <p class="lead">El jaguar (<em>Panthera onca</em>) es un mamífero carnívoro de la familia Felidae y el felino de mayor tamaño nativo de América. Su distribución actual se extiende por buena parte de América Central y del Sur, aunque la especie ha perdido una proporción importante de su distribución histórica.</p>
+   <p>La literatura científica describe al jaguar como un depredador de amplio espectro: puede consumir mamíferos, reptiles, aves y peces, y su dieta cambia según la disponibilidad local de presas. Es además un animal generalmente solitario y asociado con paisajes que ofrecen cobertura vegetal, agua y suficientes recursos alimentarios.</p>
+   <p>La especie está clasificada globalmente como <strong>Casi Amenazada (Near Threatened)</strong>. En Colombia, documentos oficiales la reconocen como una especie de alta prioridad para la conservación y se han identificado poblaciones y registros en numerosas áreas protegidas.</p>
+   <div class="citation">Citas base: Animal Diversity Web (Nogueira, s. f.); American Society of Mammalogists, Mammal Diversity Database (s. f.); Parques Nacionales Naturales de Colombia (2018); Panthera (s. f.).</div>
+  </div>
+  <div class="card">
+   <span class="tag">Mammalia</span><span class="tag">Carnivora</span><span class="tag">Felidae</span>
+   <h3>Ficha rápida</h3>
+   <p><strong>Nombre común:</strong> Jaguar, jaguar americano, yaguareté.</p>
+   <p><strong>Nombre científico:</strong> <em>Panthera onca</em></p>
+   <p><strong>Autoridad:</strong> Linnaeus, 1758.</p>
+   <p><strong>Tipo de vertebrado:</strong> Mamífero.</p>
+   <p><strong>Alimentación:</strong> Carnívora.</p>
+   <p><strong>Estado global:</strong> Casi Amenazado (NT).</p>
+   <p><strong>Distribución:</strong> América, principalmente desde México hasta Argentina.</p>
+  </div>
+ </div>
+</section>
+
+<section id="taxonomia">
+ <div class="section-no">02 · Clasificación biológica</div>
+ <h2>Taxonomía</h2>
+ <p class="lead">La clasificación permite ubicar al jaguar dentro de la diversidad animal y relacionarlo con otros mamíferos carnívoros.</p>
+ <table>
+  <tr><th>Nivel</th><th>Clasificación</th></tr>
+  <tr><td>Reino</td><td>Animalia</td></tr>
+  <tr><td>Filo</td><td>Chordata</td></tr>
+  <tr><td>Subfilo</td><td>Vertebrata</td></tr>
+  <tr><td>Clase</td><td>Mammalia</td></tr>
+  <tr><td>Orden</td><td>Carnivora</td></tr>
+  <tr><td>Familia</td><td>Felidae</td></tr>
+  <tr><td>Subfamilia</td><td>Pantherinae</td></tr>
+  <tr><td>Género</td><td><em>Panthera</em></td></tr>
+  <tr><td>Especie</td><td><em>Panthera onca</em></td></tr>
+ </table>
+ <div class="fact"><strong>Autoridad taxonómica:</strong> la especie fue descrita por Carl Linnaeus en 1758. La Mammal Diversity Database mantiene <em>Panthera onca</em> como especie viviente y registra su presencia en países de América, incluida Colombia.</div>
+ <div class="citation">Fuente taxonómica: American Society of Mammalogists, Mammal Diversity Database (s. f.).</div>
+</section>
+
+<section id="morfologia">
+ <div class="section-no">03 · Morfología</div>
+ <h2>Características morfológicas</h2>
+ <div class="grid-2">
+  <figure class="figure">
+   <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaguar%20animal%20panthera%20onca.jpg" alt="Jaguar en vista lateral">
+   <figcaption class="caption">Jaguar (<em>Panthera onca</em>). Fotografía disponible en Wikimedia Commons; consulta la ficha de la imagen para atribución y licencia.</figcaption>
+  </figure>
+  <div>
+   <p>El jaguar presenta un cuerpo compacto y musculoso, cabeza grande y mandíbulas robustas. Animal Diversity Web registra una longitud corporal aproximada de 1,5–1,85 m, una cola de 0,70–0,90 m y una masa de referencia de 68–136 kg, aunque existe variación considerable entre regiones y sexos.</p>
+   <p>El macho suele ser más grande que la hembra. Los individuos de ambientes abiertos pueden alcanzar mayores tamaños que los de bosques densos, un patrón relacionado con la disponibilidad y tamaño de las presas.</p>
+   <div class="grid">
+    <div class="card"><div class="stat">1,5–1,85 m</div><small>Longitud corporal aproximada reportada por ADW.</small></div>
+    <div class="card"><div class="stat">68–136 kg</div><small>Intervalo de masa corporal reportado por ADW.</small></div>
+   </div>
+  </div>
+ </div>
+
+ <div class="grid" style="margin-top:25px">
+  <div class="card"><h3>Pelaje y rosetas</h3><p>La coloración típica va de amarillo pálido a marrón rojizo, con manchas negras agrupadas en rosetas. Este patrón puede contribuir al camuflaje entre sombras y vegetación.</p></div>
+  <div class="card"><h3>Melanismo</h3><p>Existen individuos melanísticos, cuyo pelaje parece negro a distancia. Las rosetas pueden seguir siendo visibles cuando se observa el animal de cerca o con determinada iluminación.</p></div>
+  <div class="card"><h3>Extremidades</h3><p>Las extremidades son musculosas y están adaptadas a producir fuerza más que a mantener carreras prolongadas de alta velocidad.</p></div>
+  <div class="card"><h3>Cráneo y dentición</h3><p>La cabeza y las mandíbulas son particularmente robustas. Los caninos y la musculatura mandibular participan en la captura y muerte de presas.</p></div>
+ </div>
+
+ <figure class="figure" style="margin-top:28px">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Panthera%20onca%20Skeleton.JPG" alt="Esqueleto de Panthera onca">
+  <figcaption class="caption">Esqueleto de <em>Panthera onca</em>. Wikimedia Commons. La ficha de la imagen indica licencia Creative Commons BY-SA.</figcaption>
+ </figure>
+</section>
+
+<section id="sentidos">
+ <div class="section-no">04 · Adaptaciones</div>
+ <h2>Adaptaciones a su modo de vida</h2>
+ <div class="grid">
+  <div class="card"><h3>🦷 Mordida y cráneo</h3><p>La robustez de la cabeza y la dentición favorecen la captura de presas y permiten al jaguar consumir animales con defensas físicas como caparazones o pieles resistentes.</p></div>
+  <div class="card"><h3>🌿 Camuflaje</h3><p>Las rosetas rompen visualmente el contorno del cuerpo. En ambientes con sombras, hojas y ramas, este patrón puede dificultar la detección.</p></div>
+  <div class="card"><h3>🌊 Afinidad con el agua</h3><p>Es un felino con buenas capacidades natatorias y frecuentemente utiliza ambientes asociados a ríos, lagunas y humedales.</p></div>
+  <div class="card"><h3>👂 Percepción</h3><p>Como otros felinos, utiliza señales visuales, táctiles y acústicas para orientarse, detectar presas y comunicarse.</p></div>
+ </div>
+ <div class="grid-2" style="margin-top:30px">
+  <figure class="figure"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Panthera%20onca.jpg" alt="Jaguar"></figure>
+  <div class="quote">“El jaguar está construido para la potencia: cuerpo compacto, extremidades musculosas y una cabeza especialmente robusta.”<br><small>— Síntesis basada en la descripción morfológica de Animal Diversity Web.</small></div>
+ </div>
+</section>
+
+<section id="comportamiento">
+ <div class="section-no">05 · Etología</div>
+ <h2>Comportamiento</h2>
+ <div class="grid-2">
+  <div>
+   <p>El jaguar es generalmente <strong>solitario y territorial</strong>. Los adultos mantienen áreas de actividad que pueden variar según la calidad del hábitat, disponibilidad de presas y densidad de individuos.</p>
+   <p>Animal Diversity Web señala actividad frecuente alrededor del amanecer y el atardecer, aunque puede estar activo durante cualquier periodo del día. Los jaguares utilizan vocalizaciones, marcas en árboles, orina y heces para señalizar su presencia.</p>
+   <div class="fact">Los estudios modernos muestran que la conducta no es completamente fija: el nivel de perturbación humana puede modificar los movimientos, la selección del hábitat y el tiempo dedicado a actividades como alimentación.</div>
+  </div>
+  <figure class="figure"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaguar%20%28Panthera%20onca%29.JPG" alt="Jaguar descansando"></figure>
+ </div>
+
+ <div class="grid" style="margin-top:25px">
+  <div class="card"><h3>Territorialidad</h3><p>Los machos pueden tener áreas de actividad mayores que las hembras y sus territorios pueden solaparse con los de varias hembras.</p></div>
+  <div class="card"><h3>Actividad</h3><p>Puede ser crepuscular, nocturno o diurno según condiciones ambientales y presión humana.</p></div>
+  <div class="card"><h3>Desplazamiento</h3><p>La movilidad aumenta en determinadas condiciones, como periodos secos, cuando los recursos pueden encontrarse más dispersos.</p></div>
+  <div class="card"><h3>Respuesta a humanos</h3><p>Investigaciones recientes con datos GPS indican que incluso niveles relativamente bajos de perturbación pueden modificar patrones de movimiento y actividad.</p></div>
+ </div>
+ <p class="citation">Evidencia reciente: un estudio publicado en <em>Biological Conservation</em> analizó 116 jaguares equipados con GPS y encontró cambios en movimiento, diurnidad, búsqueda de alimento y selección de hábitat asociados con la perturbación humana.</p>
+</section>
+
+<section id="habitat">
+ <div class="section-no">06 · Ecología espacial</div>
+ <h2>Hábitat y distribución</h2>
+ <div class="grid-2">
+  <div>
+   <p>El jaguar utiliza una gran variedad de ambientes. Los registros incluyen bosques tropicales húmedos, bosques ribereños, matorrales, pantanos, sabanas y paisajes inundables. Los ambientes con <strong>agua, cobertura vegetal y presas suficientes</strong> son especialmente importantes.</p>
+   <p>La especie no se limita a selvas densas. Su presencia puede mantenerse en mosaicos de bosque, humedales y áreas abiertas siempre que existan condiciones ecológicas adecuadas.</p>
+   <div class="fact">Una revisión de 95 estudios de ocurrencia identificó variables ambientales y humanas relevantes, entre ellas vegetación, agua, clima, interacciones ecológicas, carreteras, uso del suelo y actividades humanas.</div>
+  </div>
+  <figure class="figure"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaguar%20%28Panthera%20onca%20palustris%29%20male%20Three%20Brothers%20River%202%20%28cropped%29.jpg" alt="Jaguar junto a vegetación y agua"></figure>
+ </div>
+
+ <h3 style="margin-top:35px">Distribución geográfica</h3>
+ <div class="grid-2">
+  <figure class="figure"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Panthera%20onca%20distribution.svg" alt="Mapa de distribución del jaguar"></figure>
+  <div>
+   <p>La distribución contemporánea incluye países desde México hasta Argentina. La Mammal Diversity Database registra poblaciones silvestres en numerosos países latinoamericanos, incluida Colombia.</p>
+   <p>La distribución actual es considerablemente menor que la histórica. La pérdida de cobertura, la fragmentación y la persecución han reducido o aislado poblaciones en distintas partes del continente.</p>
+   <p class="note">El mapa es una referencia visual. Para una entrega formal, debe indicarse claramente la fuente y la fecha de consulta del mapa utilizado.</p>
+  </div>
+ </div>
+</section>
+
+<section id="dieta">
+ <div class="section-no">07 · Alimentación</div>
+ <h2>Dieta y estrategia de depredación</h2>
+ <div class="grid-2">
+  <figure class="figure"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaguar%20%28Panthera%20onca%29%20male%20swimming%20%282913967426%29.jpg" alt="Jaguar nadando"></figure>
+  <div>
+   <p>El jaguar es un <strong>carnívoro obligado</strong> con una dieta muy diversa. Animal Diversity Web registra más de 85 especies de presas reportadas, entre ellas mamíferos, reptiles, peces y aves.</p>
+   <p>Su estrategia de caza suele depender del acecho y la sorpresa. La fuerza de las mandíbulas y los caninos permite matar presas de diferentes tipos, incluyendo reptiles con estructuras defensivas.</p>
+  </div>
+ </div>
+
+ <div class="grid" style="margin-top:25px">
+  <div class="card"><h3>Mamíferos</h3><p>Venados, pecaríes, tapires, armadillos, capibaras y otros mamíferos pueden formar parte de la dieta, dependiendo de la región.</p></div>
+  <div class="card"><h3>Reptiles</h3><p>Caimanes, tortugas y serpientes aparecen entre las presas registradas. La robustez de la mordida permite aprovechar recursos que otros felinos podrían explotar con mayor dificultad.</p></div>
+  <div class="card"><h3>Peces</h3><p>Los jaguares pueden capturar peces, y en humedales específicos los recursos acuáticos pueden constituir una proporción muy importante de la dieta.</p></div>
+  <div class="card"><h3>Aves y otros vertebrados</h3><p>También se han registrado aves y diversos vertebrados pequeños, lo que demuestra la amplitud de su espectro alimentario.</p></div>
+ </div>
+
+ <div class="fact"><strong>Ejemplo de evidencia cuantitativa:</strong> un estudio publicado en <em>PeerJ</em> sobre una población de alta densidad encontró que 81% de los jaguares muestreados consumían armadillos y 66% habían consumido ungulados; el peso relativo de cada grupo dependía del contexto local.</div>
+
+ <div class="card">
+  <h3>Un caso excepcional: humedales del Pantanal</h3>
+  <p>En una población del Pantanal brasileño, un estudio encontró una dieta dominada por peces y reptiles acuáticos, junto con una densidad poblacional muy elevada. Este resultado demuestra que la ecología del jaguar puede cambiar notablemente cuando un recurso alimentario acuático es extraordinariamente abundante.</p>
+  <p class="citation">Fuente: Azevedo et al. (2021), <em>Ecology</em>.</p>
+ </div>
+</section>
+
+<section id="ecologia">
+ <div class="section-no">08 · Función ecológica</div>
+ <h2>El jaguar como depredador superior</h2>
+ <div class="grid-2">
+  <div>
+   <p>El jaguar ocupa una posición alta en la red trófica. Como depredador de gran tamaño, puede influir en las poblaciones de sus presas y en las relaciones entre especies. Por eso se utiliza con frecuencia como especie de interés para la conservación a escala de paisaje.</p>
+   <p>La conservación del jaguar no consiste únicamente en mantener individuos aislados: requiere mantener los procesos ecológicos que sostienen sus presas y conservar la conectividad entre áreas donde la especie puede reproducirse y desplazarse.</p>
+  </div>
+  <div class="callout">
+   <h3>Concepto clave</h3>
+   <p><strong>Conservar al jaguar implica conservar ecosistemas funcionales.</strong></p>
+   <p>Proteger cobertura vegetal, fuentes de agua, presas naturales y corredores puede beneficiar simultáneamente a numerosas especies.</p>
+  </div>
+ </div>
+ <div class="grid" style="margin-top:25px">
+  <div class="card"><div class="stat">Depredador superior</div><p>Puede ejercer efectos de arriba hacia abajo sobre las comunidades de presas.</p></div>
+  <div class="card"><div class="stat">Especie de paisaje</div><p>Su conservación exige considerar grandes extensiones y conectividad.</p></div>
+  <div class="card"><div class="stat">Indicador</div><p>Su presencia puede aportar información sobre la integridad de determinados ambientes.</p></div>
+ </div>
+</section>
+
+<section id="colombia">
+ <div class="section-no">09 · Contexto colombiano</div>
+ <h2>El jaguar en Colombia</h2>
+ <div class="grid-2">
+  <div>
+   <p>Colombia forma parte del área de distribución del jaguar y conserva poblaciones en regiones como la Amazonia, Orinoquia y sectores del Caribe y los Andes donde persisten hábitats adecuados.</p>
+   <p>Parques Nacionales Naturales de Colombia ha documentado registros en numerosas áreas protegidas, entre ellas Amacayacu, Catatumbo Barí, Paramillo, Utría, Los Katíos, La Paya, Serranía de Chiribiquete, Cahuinarí, El Tuparro, Tinigua y otras.</p>
+   <p>En 2023, el Ministerio de Ambiente y Desarrollo Sostenible emitió lineamientos dirigidos a fortalecer la protección del jaguar y la prevención y control de amenazas como la matanza, el transporte, la tenencia y el comercio ilegal.</p>
+  </div>
+  <figure class="figure"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Panthera%20onca%20Colombia.JPG" alt="Panthera onca en Colombia"></figure>
+ </div>
+
+ <div class="fact"><strong>Importancia regional:</strong> autoridades ambientales del Magdalena Medio han señalado que los corredores ecológicos de esta región son importantes para la conservación del jaguar y que las principales presiones incluyen caza ilegal, destrucción del hábitat y pérdida de presas.</div>
+
+ <div class="grid" style="margin-top:25px">
+  <div class="card"><h3>Áreas protegidas</h3><p>La existencia de registros dentro de parques nacionales aporta refugios y oportunidades de conservación a escala de paisaje.</p></div>
+  <div class="card"><h3>Corredores</h3><p>Los corredores permiten conectar fragmentos de hábitat y facilitar el movimiento de individuos.</p></div>
+  <div class="card"><h3>Comunidades</h3><p>La conservación necesita incorporar a las comunidades locales y reducir los conflictos entre actividades productivas y fauna silvestre.</p></div>
+ </div>
+</section>
+
+<section id="conservacion">
+ <div class="section-no">10 · Estado de conservación</div>
+ <h2>Amenazas y conservación</h2>
+ <div class="grid-2">
+  <div class="card">
+   <h3>Estado global</h3>
+   <div class="stat">NT</div>
+   <p><strong>Casi Amenazado (Near Threatened)</strong></p>
+   <p>La clasificación global registrada por la Mammal Diversity Database es Near Threatened. En Colombia, Parques Nacionales Naturales reporta al jaguar como Vulnerable dentro de las categorías nacionales de amenaza.</p>
+  </div>
+  <div class="card">
+   <h3>¿Por qué está amenazado?</h3>
+   <ul>
+    <li>Conversión y fragmentación del hábitat.</li>
+    <li>Pérdida de presas naturales.</li>
+    <li>Caza y persecución directa.</li>
+    <li>Conflictos con ganadería y otras actividades.</li>
+    <li>Carreteras, infraestructura y cambios de uso del suelo.</li>
+    <li>Aislamiento de poblaciones.</li>
+   </ul>
+  </div>
+ </div>
+
+ <h3 style="margin-top:35px">Factores de presión documentados científicamente</h3>
+ <div class="grid">
+  <div class="card"><h3>Hábitat</h3><p>La pérdida y fragmentación de la cobertura natural reducen el espacio disponible y dificultan el desplazamiento.</p><div class="bar"><span style="width:90%"></span></div><small>Factor recurrente en la literatura de conservación.</small></div>
+  <div class="card"><h3>Presas</h3><p>La disminución de grandes presas puede reducir la capacidad del paisaje para mantener jaguares.</p><div class="bar"><span style="width:80%"></span></div><small>La disponibilidad de alimento es fundamental.</small></div>
+  <div class="card"><h3>Perturbación humana</h3><p>Los humanos pueden modificar movimientos, selección de hábitat y patrones de actividad.</p><div class="bar"><span style="width:75%"></span></div><small>Demostrado mediante estudios con GPS.</small></div>
+ </div>
+
+ <div class="grid-2" style="margin-top:30px">
+  <figure class="figure"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaguar%20range.png" alt="Distribución histórica del jaguar"></figure>
+  <div>
+   <h3>¿Qué acciones ayudan?</h3>
+   <ol>
+    <li>Conservar y restaurar bosques, humedales y otros hábitats.</li>
+    <li>Mantener corredores de conectividad.</li>
+    <li>Proteger las poblaciones de presas.</li>
+    <li>Reducir la caza y el comercio ilegal.</li>
+    <li>Prevenir y manejar conflictos con productores rurales.</li>
+    <li>Monitorear poblaciones mediante cámaras trampa y otras técnicas.</li>
+    <li>Incorporar a comunidades locales en la planificación de conservación.</li>
+   </ol>
+  </div>
+ </div>
+
+ <div class="fact">Un estudio de 2026 sobre el Bosque Atlántico sudamericano encontró que la baja abundancia y biomasa de presas estaba relacionada con la presencia humana y que la restauración de las poblaciones de presas es una parte importante de la conservación del jaguar en ese bioma.</div>
+</section>
+
+<section id="galeria">
+ <div class="section-no">11 · Registro visual</div>
+ <h2>Galería fotográfica</h2>
+ <p class="lead">Las siguientes fotografías muestran diferentes aspectos de la especie: su apariencia externa, anatomía, relación con el agua y presencia en distintos ambientes.</p>
+
+ <div class="gallery">
+  <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaguar%20animal%20panthera%20onca.jpg" alt="Jaguar"><figcaption>Jaguar en vista lateral</figcaption></figure>
+  <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaguar%2C%20Panthera%20Onca.jpg" alt="Jaguar de frente"><figcaption>Ejemplar fotografiado en libertad</figcaption></figure>
+  <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Panthera%20onca.jpg" alt="Jaguar"><figcaption>Ejemplar de Panthera onca</figcaption></figure>
+  <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaguar%20%28Panthera%20onca%29.jpg" alt="Jaguar"><figcaption>Jaguar: detalle del pelaje</figcaption></figure>
+  <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaguar%20%28Panthera%20onca%29.JPG" alt="Jaguar"><figcaption>Postura y morfología corporal</figcaption></figure>
+  <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Panthera%20onca%20Colombia.JPG" alt="Jaguar en Colombia"><figcaption>Panthera onca — Colombia</figcaption></figure>
+  <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Panthera%20onca%20Skeleton.JPG" alt="Esqueleto de jaguar"><figcaption>Esqueleto: anatomía comparada</figcaption></figure>
+  <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaguar%20%28Panthera%20onca%20palustris%29%20male%20Three%20Brothers%20River%202%20%28cropped%29.jpg" alt="Jaguar en el Pantanal"><figcaption>Jaguar asociado a un ambiente ribereño</figcaption></figure>
+  <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaguar%20%28Panthera%20onca%29%20male%20swimming%20%282913967426%29.jpg" alt="Jaguar nadando"><figcaption>Natación y uso del ambiente acuático</figcaption></figure>
+ </div>
+
+ <div class="card" style="margin-top:25px">
+  <h3>Procedencia del material visual</h3>
+  <p>Las fotografías y recursos gráficos de esta galería proceden de Wikimedia Commons. Cada archivo conserva su ficha de origen para consultar autoría, licencia y datos de la imagen.</p>
+  <p><a href="https://commons.wikimedia.org/wiki/Panthera_onca" target="_blank">Wikimedia Commons · Panthera onca →</a></p>
+ </div>
+</section>
+
+
+<section id="conclusion">
+ <div class="section-no">13 · Síntesis final</div>
+ <h2>Conclusión</h2>
+ <p class="lead">El jaguar es un mamífero vertebrado especializado en la depredación, pero su supervivencia depende de una red mucho más amplia de condiciones ecológicas. La especie necesita paisajes capaces de proporcionar cobertura, agua, presas y conectividad.</p>
+ <p>Su morfología robusta, dieta amplia y capacidad para utilizar ambientes terrestres y acuáticos explican parte de su éxito ecológico. Sin embargo, estas características no eliminan su vulnerabilidad frente a la transformación humana del territorio.</p>
+ <p>La evidencia disponible indica que conservar jaguares requiere actuar a escala de paisaje: mantener hábitats continuos, recuperar presas, reducir la persecución y gestionar los conflictos con las comunidades. En Colombia, estas acciones adquieren especial importancia porque el país mantiene poblaciones de la especie y corredores relevantes para su conectividad.</p>
+ <div class="callout">
+  <h3>Idea principal para recordar</h3>
+  <p>La conservación del jaguar no consiste solamente en proteger al felino: significa conservar los ecosistemas, presas, agua, corredores y comunidades que hacen posible su existencia.</p>
+ </div>
+</section>
+
+<section id="referencias">
+ <div class="section-no">14 · Bibliografía</div>
+ <h2>Referencias en formato APA 7.ª edición</h2>
+ <p>La información presentada se sustenta en literatura científica, bases de datos taxonómicas y documentos de entidades ambientales. Las referencias se presentan en formato APA 7.ª edición.</p>
+
+ <div class="reference">
+  <strong>Animal Diversity Web.</strong> (s. f.). <em>Panthera onca</em>. University of Michigan Museum of Zoology.
+  <br><a href="https://animaldiversity.org/accounts/Panthera_onca/" target="_blank">https://animaldiversity.org/accounts/Panthera_onca/</a>
+ </div>
+
+ <div class="reference">
+  <strong>American Society of Mammalogists.</strong> (s. f.). <em>Panthera onca</em> — Mammal Diversity Database.
+  <br><a href="https://www.mammaldiversity.org/taxon/1006021/" target="_blank">https://www.mammaldiversity.org/taxon/1006021/</a>
+ </div>
+
+ <div class="reference">
+  <strong>Azevedo, F. C. C., et al.</strong> (2021). Extensive aquatic subsidies lead to territorial breakdown and high density of an apex predator. <em>Ecology</em>. <a href="https://pubmed.ncbi.nlm.nih.gov/34841521/" target="_blank">PubMed</a>
+ </div>
+
+ <div class="reference">
+  <strong>Ferraz, K. M. P. M. B., et al.</strong> (2016). Can scat analysis describe the feeding habits of big cats? A case study with jaguars (<em>Panthera onca</em>) in southern Pantanal, Brazil. <em>PLoS ONE, 11</em>(3), e0151814.
+  <br><a href="https://doi.org/10.1371/journal.pone.0151814" target="_blank">https://doi.org/10.1371/journal.pone.0151814</a>
+ </div>
+
+ <div class="reference">
+  <strong>Montalvo, V. H., Sáenz-Bolaños, C., Carrillo, E., & Fuller, T. K.</strong> (2023). A review of environmental and anthropogenic variables used to model jaguar occurrence. <em>Neotropical Biology and Conservation, 18</em>(1), 31–51.
+  <br><a href="https://doi.org/10.3897/neotropical.18.e98437" target="_blank">https://doi.org/10.3897/neotropical.18.e98437</a>
+ </div>
+
+ <div class="reference">
+  <strong>Parques Nacionales Naturales de Colombia.</strong> (2018). <em>La COP 14 declara el 29 de noviembre como Día Internacional del Jaguar</em>.
+  <br><a href="https://old.parquesnacionales.gov.co/portal/es/la-cop-14-declara-el-29-de-noviembre-como-dia-internacional-de-jaguar/" target="_blank">Sitio institucional</a>
+ </div>
+
+ <div class="reference">
+  <strong>Ministerio de Ambiente y Desarrollo Sostenible de Colombia.</strong> (2023). <em>Minambiente expide lineamientos para protección del jaguar en el país</em>.
+  <br><a href="https://www.minambiente.gov.co/minambiente-expide-lineamientos-para-proteccion-del-jaguar-en-el-pais/" target="_blank">Sitio institucional</a>
+ </div>
+
+ <div class="reference">
+  <strong>Panthera.</strong> (s. f.). <em>Jaguar</em>. Panthera.
+  <br><a href="https://panthera.org/cat/jaguar" target="_blank">https://panthera.org/cat/jaguar</a>
+ </div>
+
+ <div class="reference">
+  <strong>Paschoaletto Micchi de Barros Ferraz, K. M., et al.</strong> (2026). The loss of prey base may drive the jaguar (<em>Panthera onca</em>) toward extinction in the Atlantic Forest of South America. <em>Global Ecology and Conservation, 66</em>, e04084.
+  <br><a href="https://doi.org/10.1016/j.gecco.2026.e04084" target="_blank">https://doi.org/10.1016/j.gecco.2026.e04084</a>
+ </div>
+
+ <div class="reference">
+  <strong>Wikimedia Commons.</strong> (s. f.). <em>Panthera onca</em> [Colección de imágenes].
+  <br><a href="https://commons.wikimedia.org/wiki/Panthera_onca" target="_blank">https://commons.wikimedia.org/wiki/Panthera_onca</a>
+ </div>
+
+  <div class="card"><strong>Cita parentética:</strong><p>El jaguar es un carnívoro con una dieta amplia y variable según el contexto local (Ferraz et al., 2016).</p></div>
+  <div class="card"><strong>Fuente institucional:</strong><p>Colombia cuenta con numerosas áreas protegidas donde se ha registrado la especie (Parques Nacionales Naturales de Colombia, 2018).</p></div>
+ </div>
+</section>
+
+
+</main>
+
+<footer>
+ <h2 style="color:#fff">Portafolio científico · <em>Panthera onca</em></h2>
+ <p>Investigación sobre la biología y conservación de <em>Panthera onca</em>.</p>
+ <p><a href="#inicio">↑ Volver al inicio</a></p>
+ <p style="font-size:.8rem;color:#9fb1a9">Información científica y fuentes bibliográficas consultadas para la caracterización de <em>Panthera onca</em>.</p>
+</footer>
+
+</body>
+</html>
